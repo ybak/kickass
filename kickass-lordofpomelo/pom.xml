@@ -8,9 +8,9 @@
         <version>0.1</version>
     </parent>
 
-    <artifactId>kickass-lordofpemo</artifactId>
+    <artifactId>kickass-lordofpomelo</artifactId>
     <packaging>war</packaging>
-    <name>kickass-lordofpemo</name>
+    <name>kickass-lordofpomelo</name>
 
     <properties>
     </properties>

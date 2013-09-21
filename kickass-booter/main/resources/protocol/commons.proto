@@ -1,0 +1,10 @@
+package org.kickass;
+
+option optimize_for = SPEED;
+//**********服务器信息************//
+enum PBServerState {
+	FLUENT = 0; //流畅
+	HOT = 1; //火爆
+	FULL = 2; //爆满
+	MAINTAIN = 3; //维护
+}
