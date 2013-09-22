@@ -1,34 +1,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-        <groupId>org.kickass</groupId>
-        <artifactId>kickass-parent</artifactId>
-        <version>0.1</version>
-    </parent>
+		<groupId>org.kickass</groupId>
+		<artifactId>kickass-parent</artifactId>
+		<version>0.1</version>
+	</parent>
 
-    <artifactId>kickass-lordofpomelo</artifactId>
-    <packaging>war</packaging>
-    <name>kickass-lordofpomelo</name>
+	<artifactId>kickass-lordofpomelo</artifactId>
+	<packaging>war</packaging>
+	<name>kickass-lordofpomelo</name>
 
-    <properties>
-    </properties>
+	<properties>
+	</properties>
 
-    <dependencies>
-    </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>net.bull.javamelody</groupId>
+			<artifactId>javamelody-core</artifactId>
+		</dependency>
+	</dependencies>
 
-    <build>
-        <plugins>
-        </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-        <finalName>kickass-booter</finalName>
-    </build>
-    <profiles>
-    </profiles>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<finalName>kickass-lordofpomelo</finalName>
+	</build>
+	<profiles>
+	</profiles>
 </project>
