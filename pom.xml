@@ -10,8 +10,9 @@
 	<name>kickass-parent</name>
 
 	<modules>
-		<module>kickass-server</module>
-		<module>kickass-lordofpomelo</module>
+		<module>kickass-lordofpomelo-server</module>
+		<module>kickass-lordofpomelo-web</module>
+		<module>kickass-lordofpomelo-common</module>
 		<module>kickass-booter</module>
 	</modules>
 

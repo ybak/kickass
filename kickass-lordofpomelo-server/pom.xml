@@ -9,9 +9,9 @@
 		<version>0.1</version>
 	</parent>
 
-	<artifactId>kickass-server</artifactId>
+	<artifactId>kickass-lordofpomelo-server</artifactId>
 	<packaging>war</packaging>
-	<name>kickass-server</name>
+	<name>kickass-lordofpomelo-server</name>
 
 	<properties>
 		<server.name>server1</server.name>
@@ -26,7 +26,7 @@
 		<database.password>test</database.password>
 		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
 	
-		<war.name>kickass</war.name>
+		<war.name>kickass-lordofpomelo-server</war.name>
 	</properties>
 
 	<dependencies>

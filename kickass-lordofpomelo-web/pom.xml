@@ -8,9 +8,9 @@
 		<version>0.1</version>
 	</parent>
 
-	<artifactId>kickass-lordofpomelo</artifactId>
+	<artifactId>kickass-lordofpomelo-web</artifactId>
 	<packaging>war</packaging>
-	<name>kickass-lordofpomelo</name>
+	<name>kickass-lordofpomelo-web</name>
 
 	<properties>
 	</properties>
@@ -35,7 +35,7 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-		<finalName>kickass-lordofpomelo</finalName>
+		<finalName>kickass-lordofpomelo-web</finalName>
 	</build>
 	<profiles>
 	</profiles>
