@@ -25,23 +25,8 @@
 		<spring-security.version>3.1.3.RELEASE</spring-security.version>
 		<jetty.version>9.0.5.v20130815</jetty.version>
 
-		<server.name>server1</server.name>
-		<server.socket.port>8081</server.socket.port>
-		<server.socket.timeout.read>120</server.socket.timeout.read>
-		<database.driverClassName>com.mysql.jdbc.Driver</database.driverClassName>
-		<database.server.url>jdbc:mysql://localhost:3306</database.server.url>
-		<database.server.url.params>characterEncoding=UTF-8</database.server.url.params>
-		<database.name>kickass</database.name>
-		<database.url>${database.server.url}/${database.name}?${database.server.url.params}</database.url>
-		<database.username>test</database.username>
-		<database.password>test</database.password>
-
-		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
-
 		<log4j.rootLogger>debug, stdout</log4j.rootLogger>
 		<log4j.jdbc.sql>info</log4j.jdbc.sql>
-		<war.name>kickass</war.name>
-
 		<integrationtest.exclude>%regex[.*[Integration|API].*Test.*]</integrationtest.exclude>
 	</properties>
 
