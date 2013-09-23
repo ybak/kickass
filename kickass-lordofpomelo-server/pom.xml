@@ -14,12 +14,6 @@
 	<name>kickass-lordofpomelo-server</name>
 
 	<properties>
-		<server.name>server1</server.name>
-		<server.socket.port>8081</server.socket.port>
-		<server.socket.timeout.read>120</server.socket.timeout.read>
-
-		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
-	
 		<war.name>kickass-lordofpomelo-server</war.name>
 	</properties>
 
@@ -171,7 +165,15 @@
 		</dependency>
 		<dependency>
 			<groupId>io.netty</groupId>
-			<artifactId>netty-all</artifactId>
+			<artifactId>netty-transport</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-handler</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-codec-http</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.protobuf</groupId>

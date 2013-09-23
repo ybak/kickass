@@ -24,6 +24,9 @@ public class User {
     @Column(columnDefinition = "bigint(20)")
     private long lastLoginTime;
 
+    public User() {
+    }
+
     public User(String name, String password, String from) {
         this.name = name;
         this.password = password;
