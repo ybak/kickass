@@ -17,13 +17,7 @@
 		<server.name>server1</server.name>
 		<server.socket.port>8081</server.socket.port>
 		<server.socket.timeout.read>120</server.socket.timeout.read>
-		<database.driverClassName>com.mysql.jdbc.Driver</database.driverClassName>
-		<database.server.url>jdbc:mysql://localhost:3306</database.server.url>
-		<database.server.url.params>characterEncoding=UTF-8</database.server.url.params>
-		<database.name>kickass</database.name>
-		<database.url>${database.server.url}/${database.name}?${database.server.url.params}</database.url>
-		<database.username>test</database.username>
-		<database.password>test</database.password>
+
 		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
 	
 		<war.name>kickass-lordofpomelo-server</war.name>
@@ -128,22 +122,6 @@
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-taglibs</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
@@ -206,10 +184,6 @@
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
