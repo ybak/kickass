@@ -14,6 +14,7 @@ public class ByteFrameHandler extends SimpleChannelInboundHandler<BinaryWebSocke
     protected void channelRead0(ChannelHandlerContext ctx, BinaryWebSocketFrame frame) throws Exception {
         if (handShaked) {
             ByteBuf byteBuf = frame.content();
+            Package decode = Protoc.decode(byteBuf);
             ctx.channel().writeAndFlush(new BinaryWebSocketFrame());
         }
     }
