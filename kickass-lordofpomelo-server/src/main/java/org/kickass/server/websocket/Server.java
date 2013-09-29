@@ -31,6 +31,13 @@ public class Server {
     @Value("${server.port.websocket}")
     private int websocketPort;
 
+    public Server() {
+    }
+
+    public Server(int websocketPort) {
+        this.websocketPort = websocketPort;
+    }
+
     @PostConstruct
     public void start() throws Exception {
         try {
@@ -60,9 +67,7 @@ public class Server {
         logger.warn("game server is shutting down...");
     }
 
-    public static void main(String[] args) throws Exception {
-        Server server = new Server();
-        server.websocketPort = 3014;
-        server.start();
+    public void setWebsocketPort(int websocketPort) {
+        this.websocketPort = websocketPort;
     }
 }
