@@ -9,7 +9,6 @@
 	</parent>
 
 	<artifactId>kickass-booter</artifactId>
-	<packaging>war</packaging>
 	<name>kickass-booter</name>
 
 	<properties>

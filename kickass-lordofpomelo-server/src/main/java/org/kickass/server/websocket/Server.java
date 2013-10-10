@@ -14,31 +14,23 @@ import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
 import io.netty.util.internal.logging.InternalLoggerFactory;
 import io.netty.util.internal.logging.Log4JLoggerFactory;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.kickass.server.vo.common.ServerType;
 
-@Component
 public class Server {
     public static final Logger logger = Logger.getLogger(Server.class.getName());
 
     private EventLoopGroup bossGroup = new NioEventLoopGroup();
     private EventLoopGroup workerGroup = new NioEventLoopGroup();
+    private ServerType serverType;
 
-    @Value("${server.port.websocket}")
     private int websocketPort;
 
-    public Server() {
-    }
-
-    public Server(int websocketPort) {
+    public Server(ServerType serverType, int websocketPort) {
+        this.serverType = serverType;
         this.websocketPort = websocketPort;
     }
 
-    @PostConstruct
     public void start() throws Exception {
         try {
             InternalLoggerFactory.setDefaultFactory(new Log4JLoggerFactory());
@@ -62,12 +54,15 @@ public class Server {
         }
     }
 
-    @PreDestroy
     public void shutdown() {
         logger.warn("game server is shutting down...");
     }
 
     public void setWebsocketPort(int websocketPort) {
         this.websocketPort = websocketPort;
+    }
+
+    public ServerType getServerType() {
+        return serverType;
     }
 }

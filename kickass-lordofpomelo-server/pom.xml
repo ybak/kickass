@@ -18,11 +18,11 @@
 	</properties>
 
 	<dependencies>
-	        <dependency>
-            <groupId>org.kickass</groupId>
-            <artifactId>kickass-lordofpomelo-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>org.kickass</groupId>
+			<artifactId>kickass-lordofpomelo-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -179,6 +179,10 @@
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.bull.javamelody</groupId>
+			<artifactId>javamelody-core</artifactId>
 		</dependency>
 	</dependencies>
 	<build>
