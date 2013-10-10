@@ -30,7 +30,7 @@ public class Boot {
                     latch.countDown();
                 }
             }
-        };
+        }.start();
     }
 
     private static void bootFromArgs(String[] args) {
