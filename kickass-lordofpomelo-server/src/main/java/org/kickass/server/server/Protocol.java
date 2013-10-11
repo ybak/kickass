@@ -1,4 +1,4 @@
-package org.kickass.server.websocket;
+package org.kickass.server.server;
 
 import java.util.Arrays;
 import java.util.List;

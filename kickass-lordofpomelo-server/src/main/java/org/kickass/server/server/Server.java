@@ -1,4 +1,4 @@
-package org.kickass.server.websocket;
+package org.kickass.server.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -22,13 +22,13 @@ public class Server {
 
     private EventLoopGroup bossGroup = new NioEventLoopGroup();
     private EventLoopGroup workerGroup = new NioEventLoopGroup();
+    private ServerRegistry serverRegistry;
     private ServerType serverType;
-
-    private int websocketPort;
+    private int port;
 
     public Server(ServerType serverType, int websocketPort) {
         this.serverType = serverType;
-        this.websocketPort = websocketPort;
+        this.port = websocketPort;
     }
 
     public void start() throws Exception {
@@ -45,8 +45,9 @@ public class Server {
                         }
                     });
 
-            Channel ch = sb.bind(websocketPort).sync().channel();
-            System.out.println("Web socket server started at port " + websocketPort);
+            Channel ch = sb.bind(port).sync().channel();
+            serverRegistry.regist(serverType, port);
+            logger.warn("server started at port " + port);
             ch.closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
@@ -59,10 +60,15 @@ public class Server {
     }
 
     public void setWebsocketPort(int websocketPort) {
-        this.websocketPort = websocketPort;
+        this.port = websocketPort;
     }
 
     public ServerType getServerType() {
         return serverType;
     }
+
+    public void setServerRegistry(ServerRegistry serverRegistry) {
+        this.serverRegistry = serverRegistry;
+    }
+
 }

@@ -3,7 +3,7 @@ package org.kickass.server.vo.packet.protoc;
 import java.util.Arrays;
 
 import org.apache.commons.lang3.math.NumberUtils;
-import org.kickass.server.websocket.Protocol;
+import org.kickass.server.server.Protocol;
 
 public class Message {
 

@@ -1,4 +1,4 @@
-package org.kickass.server.websocket;
+package org.kickass.server.server;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
